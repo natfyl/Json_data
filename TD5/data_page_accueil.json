@@ -1,0 +1,42 @@
+[
+  {
+    "nom": "Deezer",
+    "url": "https://www.deezer.com/fr/",
+    "url_image": "Images/Deezer.png"
+  },
+  {
+    "nom": "Netflix",
+    "url": "https://www.netflix.com/",
+    "url_image": "Images/Netflix.png"
+  },
+  {
+    "nom": "Apple",
+    "url": "https://www.apple.com/fr/",
+    "url_image": "Images/Apple.png"
+  },
+  {
+    "nom": "UHA",
+    "url": "https://e-services.uha.fr/fr/index.html",
+    "url_image": "Images/UHA.png"
+  },
+  {
+    "nom": "CodePen",
+    "url": "https://codepen.io/",
+    "url_image": "Images/CodePen.png"
+  },
+  {
+    "nom": "ImgBB",
+    "url": "https://imgbb.com/",
+    "url_image": "Images/ImgBB.png"
+  },
+  {
+    "nom": "Gmap",
+    "url": "https://www.google.com/maps/",
+    "url_image": "Images/Gmap.png"
+  },
+  {
+    "nom": "Wiki",
+    "url": "https://fr.wikipedia.org/wiki/Wiki",
+    "url_image": "Images/Wiki.png"
+  }
+]
