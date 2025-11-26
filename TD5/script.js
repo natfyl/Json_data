@@ -25,7 +25,10 @@ function renderSites(liste_site) {
   });
 }
 
-fetch("data_page_accueil.json")
+const remoteJsonUrl = "https://raw.githubusercontent.com/votre-repo/data_page_accueil.json";
+const localJsonUrl = "data_page_accueil.json";
+
+fetch(remoteJsonUrl)
   .then((response) => {
     if (!response.ok) {
       throw new Error(`HTTP ${response.status}`);
@@ -33,7 +36,18 @@ fetch("data_page_accueil.json")
     return response.json();
   })
   .then((liste_site) => renderSites(liste_site))
-  .catch((err) => {
-    console.warn("Impossible de charger les donnees JSON, usage du fallback local.", err);
-    renderSites(fallbackSites);
+  .catch(() => {
+    // Tentative locale (si servie en http(s) ou file://)
+    fetch(localJsonUrl)
+      .then((response) => {
+        if (!response.ok) {
+          throw new Error(`HTTP ${response.status}`);
+        }
+        return response.json();
+      })
+      .then((liste_site) => renderSites(liste_site))
+      .catch((err) => {
+        console.warn("Impossible de charger les donnees JSON, usage du fallback local.", err);
+        renderSites(fallbackSites);
+      });
   });
